@@ -1,7 +1,32 @@
-body {
-    margin: 0;
+@font-face {
+    font-family: 'Friz Quadrata Std Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Friz Quadrata Std Medium'), url('/fonts/friz-quadrata-std-medium-5870338ec7ef8.woff') format('woff');
 }
 
+body {
+    margin: 0;
+    font-family: 'Friz Quadrata Std Medium';
+    color: rgb(240, 230, 210);
+    background-color: rgb(1, 10, 19);
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.divider{ 
+    margin: var(--gap);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 95%;
+    border-bottom: 1px solid rgba(240, 230, 210, .2);
+}
 
 .champions {
     --gap: 25px;
@@ -17,7 +42,7 @@ body {
     gap: var(--gap);
     justify-items: center;
 
-    background-color: rgb(1, 10, 19);
+    /* background-color: rgb(1, 10, 19); */
 }
 
 .champion-icon {
@@ -27,8 +52,40 @@ body {
     height: 130px;
 }
 
+.done {
+    opacity: 25%;
+}
+
+.section1 {
+    background: url(/images/aatrox-chogath.PNG);
+}
+
 .section2 {
     background: url(/images/corki-heim.PNG);
+}
+
+.section3 {
+    background: url(/images/illoai-kindred.PNG);
+}
+
+.section4 {
+    background: url(/images/kled-neeko.PNG);
+}
+
+.section5 {
+    background: url(/images/nidalee-rumble.PNG);
+}
+
+.section6 {
+    background: url(/images/ryze-talon.PNG);
+}
+
+.section7 {
+    background: url(/images/taric-warwick.PNG);
+}
+
+.section8 {
+    background: url(/images/wukong-zyra.PNG);
 }
 
 .icon1 {
