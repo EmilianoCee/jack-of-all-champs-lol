@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+}
+
+
+.champions {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.champion-icon {
+    background: url(/images/ryze-talon.PNG);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 0 2% ;
+}
+
+.icon1 {
+    background-position-x: 0px;  
+}
+
+.icon2 {
+    background-position-x: -125px;
+}
+
+.icon3 {
+    background-position-x: -250px;
+}
+
+.icon4 {
+    background-position-x: -375px;
+}
+
+.icon5 {
+    background-position-x: -500px;
+}
+
+.icon6 {
+    background-position-x: -625px;
+}
+
+.icon7 {
+    background-position-x: -750px;
+}
+
+.row2 {
+    background-position-y: -153px ;
+}
+
+.row3 {
+    background-position-y: -306px ;
+}
