@@ -57,12 +57,13 @@ img[src*="icon"] {
     object-fit: contain;
 }
 
+input {
+    font-size: 1rem;
+}
 
-
-
-
-
-
+.hide {
+    display: none;
+}
 
 /* champion icons */
 .champions {
@@ -93,8 +94,12 @@ img[src*="icon"] {
     color: rgba(0, 0, 0, .0);
 }
 
+.champion-icon:hover {
+    opacity: 150%;
+}
+
 .done {
-    opacity: 25%;
+    opacity: 50%;
 }
 
 .section1 {
