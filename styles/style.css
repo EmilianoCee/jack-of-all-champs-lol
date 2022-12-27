@@ -87,10 +87,10 @@ img[src*="icon"] {
     background-repeat: repeat;
     width: 100px;
     height: 130px;
-    /* display: flex;
+    display: flex;
     justify-content: center;
     align-items: flex-end;
-    color: rgba(0, 0, 0, .0); */
+    color: rgba(0, 0, 0, .0);
 }
 
 .done {
