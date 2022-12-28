@@ -4,10 +4,248 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jack of All</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <script src="/javascript/javascript.js" defer></script>
+    <title>Jack of All Champs</title>
 </head>
 <body>
-    
+        <div class="header">
+            <div class="divider">
+                <h1>Jack of All Champs</h1>
+                <nav>
+                    <div class="roles">
+                        <div class="top-role">
+                            <a href="#"><img src="/images/top-icon.png" alt="top lane role icon"></a>
+                        </div>
+                        <div class="jungle-role">
+                            <a href="#"><img src="/images/jungle-icon.png" alt="jungle role icon"></a>
+                        </div>
+                        <div class="middle-role">
+                            <a href="#"><img src="/images/mid-icon.png" alt="jungle role icon"></a>
+                        </div>
+                        <div class="bottom-role">
+                            <a href="#"><img src="/images/bottom-icon.png" alt="jungle role icon"></a>
+                        </div>
+                        <div class="support-role">
+                            <a href="#"><img src="/images/support-icon.png" alt="jungle role icon"></a>
+                        </div>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="search" id="search" data-search>
+                    </div>
+                </nav>
+
+                <div class="manual-select">
+                    <button onclick="getText()">select</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="item">penis</div>
+        <div class="item">COCK</div>
+        <div class="item">dildo</div>
+        <div class="item">cum</div>
+        
+        <div id="nipple">fml</div>
+
+        <p id="demo"></p>
+
+        <div class="champions">
+            <!-- section one of images -->
+            <div class="champion-icon section1 row1 icon1 Aatrox">Aatrox</div>
+            <div class="champion-icon section1 row1 icon2">Ahri</div>
+            <div class="champion-icon section1 row1 icon3">Akali</div>
+            <div class="champion-icon section1 row1 icon4">Akshan</div>
+            <div class="champion-icon section1 row1 icon5">Alistar</div>
+            <div class="champion-icon section1 row1 icon6">Amumu</div>
+            <div class="champion-icon section1 row1 icon7">Anivia</div>
+
+            <div class="champion-icon section1 row2 icon1">Annie</div>
+            <div class="champion-icon section1 row2 icon2">Aphelios</div>
+            <div class="champion-icon section1 row2 icon3">Ashe</div>
+            <div class="champion-icon section1 row2 icon4">Aurelion Sol</div>
+            <div class="champion-icon section1 row2 icon5">Azir</div>
+            <div class="champion-icon section1 row2 icon6">Bard</div>
+            <div class="champion-icon section1 row2 icon7">Bel'Veth</div>
+
+            <div class="champion-icon section1 row3 icon1">Blitzcrank</div>
+            <div class="champion-icon section1 row3 icon2">Brand</div>
+            <div class="champion-icon section1 row3 icon3">Braum</div>
+            <div class="champion-icon section1 row3 icon4">Caitlyn</div>
+            <div class="champion-icon section1 row3 icon5">Camille</div>
+            <div class="champion-icon section1 row3 icon6">Cassiopeia</div>
+            <div class="champion-icon section1 row3 icon7">Cho'Gath</div>
+
+            <!-- section two of images -->
+            <div class="champion-icon section2 row1 icon1">Corki</div>
+            <div class="champion-icon section2 row1 icon2">Darius</div>
+            <div class="champion-icon section2 row1 icon3">Diana</div>
+            <div class="champion-icon section2 row1 icon4">Dr. Mundo</div>
+            <div class="champion-icon section2 row1 icon5">Draven</div>
+            <div class="champion-icon section2 row1 icon6">Ekko</div>
+            <div class="champion-icon section2 row1 icon7">Elise</div>
+
+            <div class="champion-icon section2 row2 icon1">Evelynn</div>
+            <div class="champion-icon section2 row2 icon2">Ezreal</div>
+            <div class="champion-icon section2 row2 icon3">Fiddlesticks</div>
+            <div class="champion-icon section2 row2 icon4">Fiora</div>
+            <div class="champion-icon section2 row2 icon5">Fizz</div>
+            <div class="champion-icon section2 row2 icon6">Galio</div>
+            <div class="champion-icon section2 row2 icon7">Gangplank</div>
+                
+            <div class="champion-icon section2 row3 icon1">Garen</div>
+            <div class="champion-icon section2 row3 icon2">Gnar</div>
+            <div class="champion-icon section2 row3 icon3">Gragas</div>
+            <div class="champion-icon section2 row3 icon4">Graves</div>
+            <div class="champion-icon section2 row3 icon5">Gwen</div>
+            <div class="champion-icon section2 row3 icon6">Hecarim</div>
+            <div class="champion-icon section2 row3 icon7">Heimerdinger</div>
+
+            <!-- section three of images -->
+            <div class="champion-icon section3 row1 icon1">Illaoi</div>
+            <div class="champion-icon section3 row1 icon2">Irelia</div>
+            <div class="champion-icon section3 row1 icon3">Ivern</div>
+            <div class="champion-icon section3 row1 icon4">Janna</div>
+            <div class="champion-icon section3 row1 icon5">Jarvan IV</div>
+            <div class="champion-icon section3 row1 icon6">Jax</div>
+            <div class="champion-icon section3 row1 icon7">Jayce</div>
+
+            <div class="champion-icon section3 row2 icon1">Jhin</div>
+            <div class="champion-icon section3 row2 icon2">Jinx</div>
+            <div class="champion-icon section3 row2 icon3">K'Sante</div>
+            <div class="champion-icon section3 row2 icon4">Kai'Sa</div>
+            <div class="champion-icon section3 row2 icon5">Kalista</div>
+            <div class="champion-icon section3 row2 icon6">Karma</div>
+            <div class="champion-icon section3 row2 icon7">Karthus</div>
+
+            <div class="champion-icon section3 row3 icon1">Kassadin</div>
+            <div class="champion-icon section3 row3 icon2">Katarina</div>
+            <div class="champion-icon section3 row3 icon3">Kayle</div>
+            <div class="champion-icon section3 row3 icon4">Kayn</div>
+            <div class="champion-icon section3 row3 icon5">Kennen</div>
+            <div class="champion-icon section3 row3 icon6">Kha'Zix</div>
+            <div class="champion-icon section3 row3 icon7">Kindred</div>
+
+            <!-- section four of images -->
+            <div class="champion-icon section4 row1 icon1">Kled</div>
+            <div class="champion-icon section4 row1 icon2">Kog'Maw</div>
+            <div class="champion-icon section4 row1 icon3">LeBlanc</div>
+            <div class="champion-icon section4 row1 icon4">Lee Sin</div>
+            <div class="champion-icon section4 row1 icon5">Leona</div>
+            <div class="champion-icon section4 row1 icon6">Lillia</div>
+            <div class="champion-icon section4 row1 icon7">Lissandra</div>
+
+            <div class="champion-icon section4 row2 icon1">Lucian</div>
+            <div class="champion-icon section4 row2 icon2">Lulu</div>
+            <div class="champion-icon section4 row2 icon3">Lux</div>
+            <div class="champion-icon section4 row2 icon4">Malphite</div>
+            <div class="champion-icon section4 row2 icon5">Malzahar</div>
+            <div class="champion-icon section4 row2 icon6">Maokai</div>
+            <div class="champion-icon section4 row2 icon7">Master Yi</div>
+
+            <div class="champion-icon section4 row3 icon1">Miss Fortune</div>
+            <div class="champion-icon section4 row3 icon2">Mordekaiser</div>
+            <div class="champion-icon section4 row3 icon3">Morgana</div>
+            <div class="champion-icon section4 row3 icon4">Nami</div>
+            <div class="champion-icon section4 row3 icon5">Nasus</div>
+            <div class="champion-icon section4 row3 icon6">Nautilus</div>
+            <div class="champion-icon section4 row3 icon7">Neeko</div>
+
+            <!-- section five of images -->
+            <div class="champion-icon section5 row1 icon1">Nidalee</div>
+            <div class="champion-icon section5 row1 icon2">Nilah</div>
+            <div class="champion-icon section5 row1 icon3">Nocturne</div>
+            <div class="champion-icon section5 row1 icon4">Nunu & Willump</div>
+            <div class="champion-icon section5 row1 icon5">Olaf</div>
+            <div class="champion-icon section5 row1 icon6">Orianna</div>
+            <div class="champion-icon section5 row1 icon7">Ornn</div>
+
+            <div class="champion-icon section5 row2 icon1">Pantheon</div>
+            <div class="champion-icon section5 row2 icon2">Poppy</div>
+            <div class="champion-icon section5 row2 icon3">Pyke</div>
+            <div class="champion-icon section5 row2 icon4">Qiyana</div>
+            <div class="champion-icon section5 row2 icon5">Quinn</div>
+            <div class="champion-icon section5 row2 icon6">Rakan</div>
+            <div class="champion-icon section5 row2 icon7">Rammus</div>
+
+            <div class="champion-icon section5 row3 icon1">Rek'Sai</div>
+            <div class="champion-icon section5 row3 icon2">Rell</div>
+            <div class="champion-icon section5 row3 icon3">Renata Glasc</div>
+            <div class="champion-icon section5 row3 icon4">Renekton</div>
+            <div class="champion-icon section5 row3 icon5">Rengar</div>
+            <div class="champion-icon section5 row3 icon6">Riven</div>
+            <div class="champion-icon section5 row3 icon7">Rumble</div>
+
+            <!-- section six of images -->
+            <div class="champion-icon section6 row1 icon1">Ryze</div>
+            <div class="champion-icon section6 row1 icon2">Samira</div>
+            <div class="champion-icon section6 row1 icon3">Sejuani</div>
+            <div class="champion-icon section6 row1 icon4">Senna</div>
+            <div class="champion-icon section6 row1 icon5">Seraphine</div>
+            <div class="champion-icon section6 row1 icon6">Sett</div>
+            <div class="champion-icon section6 row1 icon7">Shaco</div>
+
+            <div class="champion-icon section6 row2 icon1">Shen</div>
+            <div class="champion-icon section6 row2 icon2">Shyvana</div>
+            <div class="champion-icon section6 row2 icon3">Singed</div>
+            <div class="champion-icon section6 row2 icon4">Sion</div>
+            <div class="champion-icon section6 row2 icon5">Sivir</div>
+            <div class="champion-icon section6 row2 icon6">Skarner</div>
+            <div class="champion-icon section6 row2 icon7">Sona</div>
+
+            <div class="champion-icon section6 row3 icon1">Soraka</div>
+            <div class="champion-icon section6 row3 icon2">Swain</div>
+            <div class="champion-icon section6 row3 icon3">Sylas</div>
+            <div class="champion-icon section6 row3 icon4">Syndra</div>
+            <div class="champion-icon section6 row3 icon5">Tahm Kench</div>
+            <div class="champion-icon section6 row3 icon6">Taliyah</div>
+            <div class="champion-icon section6 row3 icon7">Talon</div>
+
+            <!-- section seven of images -->
+            <div class="champion-icon section7 row1 icon1">Taric</div>
+            <div class="champion-icon section7 row1 icon2">Teemo</div>
+            <div class="champion-icon section7 row1 icon3">Thresh</div>
+            <div class="champion-icon section7 row1 icon4">Tristana</div>
+            <div class="champion-icon section7 row1 icon5">Trundle</div>
+            <div class="champion-icon section7 row1 icon6">Tryndamere</div>
+            <div class="champion-icon section7 row1 icon7">Twisted Fate</div>
+
+            <div class="champion-icon section7 row2 icon1">Twitch</div>
+            <div class="champion-icon section7 row2 icon2">Udyr</div>
+            <div class="champion-icon section7 row2 icon3">Urgot</div>
+            <div class="champion-icon section7 row2 icon4">Varus</div>
+            <div class="champion-icon section7 row2 icon5">Vayne</div>
+            <div class="champion-icon section7 row2 icon6">Veigar</div>
+            <div class="champion-icon section7 row2 icon7">Vel'Koz</div>
+
+            <div class="champion-icon section7 row3 icon1">Vex</div>
+            <div class="champion-icon section7 row3 icon2">Vi</div>
+            <div class="champion-icon section7 row3 icon3">Viego</div>
+            <div class="champion-icon section7 row3 icon4">Viktor</div>
+            <div class="champion-icon section7 row3 icon5">Vladimir</div>
+            <div class="champion-icon section7 row3 icon6">Volibear</div>
+            <div class="champion-icon section7 row3 icon7">Warwick</div>
+
+            <!-- section eight of images -->
+            <div class="champion-icon section8 row1 icon1">Wukong</div>
+            <div class="champion-icon section8 row1 icon2">Xayah</div>
+            <div class="champion-icon section8 row1 icon3">Xerath</div>
+            <div class="champion-icon section8 row1 icon4">Xin Zhao</div>
+            <div class="champion-icon section8 row1 icon5">Yasuo</div>
+            <div class="champion-icon section8 row1 icon6">Yone</div>
+            <div class="champion-icon section8 row1 icon7">Yorick</div>
+
+            <div class="champion-icon section8 row2 icon1">Yuumi</div>
+            <div class="champion-icon section8 row2 icon2">Zac</div>
+            <div class="champion-icon section8 row2 icon3">Zed</div>
+            <div class="champion-icon section8 row2 icon4">Zeri</div>
+            <div class="champion-icon section8 row2 icon5">Ziggs</div>
+            <div class="champion-icon section8 row2 icon6">Zilean</div>
+            <div class="champion-icon section8 row2 icon7">Zoe</div>
+                
+            <div class="champion-icon section8 row3 icon1">Zyra</div>
+        </div>
 </body>
 </html>
