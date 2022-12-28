@@ -14,7 +14,7 @@
                 <h1>Jack of All Champs</h1>
                 <nav>
                     <div class="roles">
-                        <div class="top-role">
+                        <div class="top-role" id="top">
                             <a href="#"><img src="/images/top-icon.png" alt="top lane role icon"></a>
                         </div>
                         <div class="jungle-role">
@@ -32,31 +32,20 @@
                     </div>
 
                     <div class="search-bar">
-                        <input type="search" id="search" data-search>
+                        <input type="search" id="search" oninput="searchChamp()" type="text" name="search" placeholder="SEARCH..." on>
                     </div>
                 </nav>
 
                 <div class="manual-select">
-                    <button onclick="getText()">select</button>
+                    <button onclick="removeClass()">select</button>
                 </div>
             </div>
         </div>
-
-
-        <div class="item">penis</div>
-        <div class="item">COCK</div>
-        <div class="item">dildo</div>
-        <div class="item">cum</div>
-        
-        <div id="nipple">fml</div>
-
-        <p id="demo"></p>
-
         <div class="champions">
             <!-- section one of images -->
-            <div class="champion-icon section1 row1 icon1 Aatrox">Aatrox</div>
-            <div class="champion-icon section1 row1 icon2">Ahri</div>
-            <div class="champion-icon section1 row1 icon3">Akali</div>
+            <div class="champion-icon section1 row1 icon1 active top" id="Aatrox">Aatrox</div>
+            <div class="champion-icon section1 row1 icon2 active">Ahri</div>
+            <div class="champion-icon section1 row1 icon3 active">Akali</div>
             <div class="champion-icon section1 row1 icon4">Akshan</div>
             <div class="champion-icon section1 row1 icon5">Alistar</div>
             <div class="champion-icon section1 row1 icon6">Amumu</div>
@@ -74,7 +63,7 @@
             <div class="champion-icon section1 row3 icon2">Brand</div>
             <div class="champion-icon section1 row3 icon3">Braum</div>
             <div class="champion-icon section1 row3 icon4">Caitlyn</div>
-            <div class="champion-icon section1 row3 icon5">Camille</div>
+            <div class="champion-icon section1 row3 icon5 top">Camille</div>
             <div class="champion-icon section1 row3 icon6">Cassiopeia</div>
             <div class="champion-icon section1 row3 icon7">Cho'Gath</div>
 
