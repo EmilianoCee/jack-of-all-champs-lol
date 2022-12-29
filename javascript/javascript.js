@@ -77,7 +77,6 @@ function searchChamp() {
     let input = document.getElementById("search").value
     input = input.toLowerCase();
     let x = document.getElementsByClassName("champion-icon");
-    console.log(input)
       
     for (i = 0; i < x.length; i++) { 
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
@@ -153,7 +152,6 @@ function sortRole() {
 
 // WORKING TOGGLE, cons: have to add function to every icon
 function gatherId(clickedId) {
-    console.log(clickedId)
     changeop(clickedId)
 }
 
@@ -168,3 +166,25 @@ function changeop(clickedId) {
     toggle = !toggle;
 }
 
+
+// need to change index everytime stylesheet is updated
+
+function infColumns(){
+    const stylesheet = document.styleSheets[0];
+    console.log(stylesheet);
+    let elementRules;
+
+    elementRules = stylesheet.cssRules[2];
+
+    elementRules.style.setProperty("grid-template-columns", "repeat(auto-fill, minmax(100px, 1fr))");
+}
+
+function sevenColumns(){
+    const stylesheet = document.styleSheets[0];
+    console.log(stylesheet);
+    let elementRules;
+
+    elementRules = stylesheet.cssRules[2];
+
+    elementRules.style.setProperty("grid-template-columns", "repeat(7, 1fr)");
+}

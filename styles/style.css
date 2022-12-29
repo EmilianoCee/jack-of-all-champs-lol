@@ -12,6 +12,19 @@ body {
     background-color: rgb(1, 10, 19);
 }
 
+/* keep here to maintain column function */
+.champions {
+    box-sizing: border-box;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+    grid-auto-rows: 130px;
+    gap: 25px;
+    justify-items: center;
+    /* background-color: rgb(1, 10, 19); */
+}
+
 .header {
     display: flex;
     justify-content: space-around;
@@ -29,7 +42,7 @@ body {
 }
 
 nav {
-    width: 70%;
+    width: 75%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -97,23 +110,16 @@ input {
     margin: 10px;
 }
 
+.settings {
+    display: flex;
+    /* flex-direction: column; */
+}
+
 .hide {
     display: none;
 }
 
 /* champion icons */
-.champions {
-    box-sizing: border-box;
-    padding: 25px;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
-    grid-auto-rows: 130px;
-    gap: 25px;
-    justify-items: center;
-
-    /* background-color: rgb(1, 10, 19); */
-}
 
 .champion-icon {
     background: url(/images/singed.png);
@@ -124,7 +130,6 @@ input {
     justify-content: center;
     align-items: flex-end;
     color: rgba(0, 0, 0, .0);
-    
 }
 
 .champion-icon::selection {
