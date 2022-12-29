@@ -14,238 +14,231 @@
                 <h1>Jack of All Champs</h1>
                 <nav>
                     <div class="roles">
-                        <div class="top-role">
-                            <a href="#"><img src="/images/top-icon.png" alt="top lane role icon"></a>
+                        <div class="top-role role" id="top" onclick="sortRole(top)">
+                            <img src="/images/top-icon.png" alt="top lane role icon">
                         </div>
-                        <div class="jungle-role">
-                            <a href="#"><img src="/images/jungle-icon.png" alt="jungle role icon"></a>
+                        <div class="jungle-role role" onclick="sortRole(jungle)">
+                            <img src="/images/jungle-icon.png" alt="jungle role icon">
                         </div>
-                        <div class="middle-role">
-                            <a href="#"><img src="/images/mid-icon.png" alt="jungle role icon"></a>
+                        <div class="middle-role role" onclick="sortRole(middle)">
+                            <img src="/images/mid-icon.png" alt="jungle role icon">
                         </div>
-                        <div class="bottom-role">
-                            <a href="#"><img src="/images/bottom-icon.png" alt="jungle role icon"></a>
+                        <div class="bottom-role role" onclick="sortRole(bottom)">
+                            <img src="/images/bottom-icon.png" alt="jungle role icon">
                         </div>
-                        <div class="support-role">
-                            <a href="#"><img src="/images/support-icon.png" alt="jungle role icon"></a>
+                        <div class="support-role role" onclick="sortRole(support)">
+                            <img src="/images/support-icon.png" alt="jungle role icon">
                         </div>
                     </div>
 
-                    <div class="search-bar">
-                        <input type="search" id="search" data-search>
+                    <div class="searchbar">
+                        <div class="search-icon"><img src="/images/search-glass.png" alt=""></div>
+                        <input type="search" id="search" oninput="searchChamp()" type="text" name="search" placeholder="Search" on>
                     </div>
                 </nav>
 
-                <div class="manual-select">
-                    <button onclick="getText()">select</button>
+                <div class="settings">
+                    <button onclick="infColumns()">Max Columns</button>
+                    <button onclick="sevenColumns()">Seven Columns</button>
                 </div>
             </div>
         </div>
-
-
-        <div class="item">penis</div>
-        <div class="item">COCK</div>
-        <div class="item">dildo</div>
-        <div class="item">cum</div>
-        
-        <div id="nipple">fml</div>
-
-        <p id="demo"></p>
-
         <div class="champions">
             <!-- section one of images -->
-            <div class="champion-icon section1 row1 icon1 Aatrox">Aatrox</div>
-            <div class="champion-icon section1 row1 icon2">Ahri</div>
-            <div class="champion-icon section1 row1 icon3">Akali</div>
-            <div class="champion-icon section1 row1 icon4">Akshan</div>
-            <div class="champion-icon section1 row1 icon5">Alistar</div>
-            <div class="champion-icon section1 row1 icon6">Amumu</div>
-            <div class="champion-icon section1 row1 icon7">Anivia</div>
+            <div class="champion-icon section1 row1 icon1" id="0" onclick="changeop(this.id)">Aatrox top </div>
+            <div class="champion-icon section1 row1 icon2" id="1" onclick="changeop(this.id)">Ahri middle</div>
+            <div class="champion-icon section1 row1 icon3" id="2" onclick="changeop(this.id)">Akali middle top</div>
+            <div class="champion-icon section1 row1 icon4" id="3" onclick="changeop(this.id)">Akshan</div>
+            <div class="champion-icon section1 row1 icon5" id="4" onclick="changeop(this.id)">Alistar</div>
+            <div class="champion-icon section1 row1 icon6" id="5" onclick="changeop(this.id)">Amumu</div>
+            <div class="champion-icon section1 row1 icon7" id="6" onclick="changeop(this.id)">Anivia</div>
 
-            <div class="champion-icon section1 row2 icon1">Annie</div>
-            <div class="champion-icon section1 row2 icon2">Aphelios</div>
-            <div class="champion-icon section1 row2 icon3">Ashe</div>
-            <div class="champion-icon section1 row2 icon4">Aurelion Sol</div>
-            <div class="champion-icon section1 row2 icon5">Azir</div>
-            <div class="champion-icon section1 row2 icon6">Bard</div>
-            <div class="champion-icon section1 row2 icon7">Bel'Veth</div>
+            <div class="champion-icon section1 row2 icon1" id="7" onclick="changeop(this.id)">Annie</div>
+            <div class="champion-icon section1 row2 icon2" id="8" onclick="changeop(this.id)">Aphelios</div>
+            <div class="champion-icon section1 row2 icon3" id="9" onclick="changeop(this.id)">Ashe</div>
+            <div class="champion-icon section1 row2 icon4" id="10" onclick="changeop(this.id)">Aurelion Sol</div>
+            <div class="champion-icon section1 row2 icon5" id="11" onclick="changeop(this.id)">Azir</div>
+            <div class="champion-icon section1 row2 icon6" id="12" onclick="changeop(this.id)">Bard</div>
+            <div class="champion-icon section1 row2 icon7" id="13" onclick="changeop(this.id)">Bel'Veth</div>
 
-            <div class="champion-icon section1 row3 icon1">Blitzcrank</div>
-            <div class="champion-icon section1 row3 icon2">Brand</div>
-            <div class="champion-icon section1 row3 icon3">Braum</div>
-            <div class="champion-icon section1 row3 icon4">Caitlyn</div>
-            <div class="champion-icon section1 row3 icon5">Camille</div>
-            <div class="champion-icon section1 row3 icon6">Cassiopeia</div>
-            <div class="champion-icon section1 row3 icon7">Cho'Gath</div>
+            <div class="champion-icon section1 row3 icon1" id="14" onclick="changeop(this.id)">Blitzcrank</div>
+            <div class="champion-icon section1 row3 icon2" id="15" onclick="changeop(this.id)">Brand</div>
+            <div class="champion-icon section1 row3 icon3" id="16" onclick="changeop(this.id)">Braum</div>
+            <div class="champion-icon section1 row3 icon4" id="17" onclick="changeop(this.id)">Caitlyn</div>
+            <div class="champion-icon section1 row3 icon5" id="18" onclick="changeop(this.id)">Camille</div>
+            <div class="champion-icon section1 row3 icon6" id="19" onclick="changeop(this.id)">Cassiopeia</div>
+            <div class="champion-icon section1 row3 icon7" id="20" onclick="changeop(this.id)">Cho'Gath</div>
 
             <!-- section two of images -->
-            <div class="champion-icon section2 row1 icon1">Corki</div>
-            <div class="champion-icon section2 row1 icon2">Darius</div>
-            <div class="champion-icon section2 row1 icon3">Diana</div>
-            <div class="champion-icon section2 row1 icon4">Dr. Mundo</div>
-            <div class="champion-icon section2 row1 icon5">Draven</div>
-            <div class="champion-icon section2 row1 icon6">Ekko</div>
-            <div class="champion-icon section2 row1 icon7">Elise</div>
+            <div class="champion-icon section2 row1 icon1" id="21" onclick="changeop(this.id)">Corki</div>
+            <div class="champion-icon section2 row1 icon2" id="22" onclick="changeop(this.id)">Darius</div>
+            <div class="champion-icon section2 row1 icon3" id="23" onclick="changeop(this.id)">Diana</div>
+            <div class="champion-icon section2 row1 icon4" id="24" onclick="changeop(this.id)">Dr. Mundo</div>
+            <div class="champion-icon section2 row1 icon5" id="25" onclick="changeop(this.id)">Draven</div>
+            <div class="champion-icon section2 row1 icon6" id="26" onclick="changeop(this.id)">Ekko</div>
+            <div class="champion-icon section2 row1 icon7" id="27" onclick="changeop(this.id)">Elise</div>
 
-            <div class="champion-icon section2 row2 icon1">Evelynn</div>
-            <div class="champion-icon section2 row2 icon2">Ezreal</div>
-            <div class="champion-icon section2 row2 icon3">Fiddlesticks</div>
-            <div class="champion-icon section2 row2 icon4">Fiora</div>
-            <div class="champion-icon section2 row2 icon5">Fizz</div>
-            <div class="champion-icon section2 row2 icon6">Galio</div>
-            <div class="champion-icon section2 row2 icon7">Gangplank</div>
+            <div class="champion-icon section2 row2 icon1" id="28" onclick="changeop(this.id)">Evelynn</div>
+            <div class="champion-icon section2 row2 icon2" id="29" onclick="changeop(this.id)">Ezreal</div>
+            <div class="champion-icon section2 row2 icon3" id="30" onclick="changeop(this.id)">Fiddlesticks</div>
+            <div class="champion-icon section2 row2 icon4" id="31" onclick="changeop(this.id)">Fiora</div>
+            <div class="champion-icon section2 row2 icon5" id="32" onclick="changeop(this.id)">Fizz</div>
+            <div class="champion-icon section2 row2 icon6" id="33" onclick="changeop(this.id)">Galio</div>
+            <div class="champion-icon section2 row2 icon7" id="34" onclick="changeop(this.id)">Gangplank</div>
                 
-            <div class="champion-icon section2 row3 icon1">Garen</div>
-            <div class="champion-icon section2 row3 icon2">Gnar</div>
-            <div class="champion-icon section2 row3 icon3">Gragas</div>
-            <div class="champion-icon section2 row3 icon4">Graves</div>
-            <div class="champion-icon section2 row3 icon5">Gwen</div>
-            <div class="champion-icon section2 row3 icon6">Hecarim</div>
-            <div class="champion-icon section2 row3 icon7">Heimerdinger</div>
+            <div class="champion-icon section2 row3 icon1" id="35" onclick="changeop(this.id)">Garen</div>
+            <div class="champion-icon section2 row3 icon2" id="36" onclick="changeop(this.id)">Gnar</div>
+            <div class="champion-icon section2 row3 icon3" id="37" onclick="changeop(this.id)">Gragas</div>
+            <div class="champion-icon section2 row3 icon4" id="38" onclick="changeop(this.id)">Graves</div>
+            <div class="champion-icon section2 row3 icon5" id="39" onclick="changeop(this.id)">Gwen</div>
+            <div class="champion-icon section2 row3 icon6" id="40" onclick="changeop(this.id)">Hecarim</div>
+            <div class="champion-icon section2 row3 icon7" id="41" onclick="changeop(this.id)">Heimerdinger</div>
 
             <!-- section three of images -->
-            <div class="champion-icon section3 row1 icon1">Illaoi</div>
-            <div class="champion-icon section3 row1 icon2">Irelia</div>
-            <div class="champion-icon section3 row1 icon3">Ivern</div>
-            <div class="champion-icon section3 row1 icon4">Janna</div>
-            <div class="champion-icon section3 row1 icon5">Jarvan IV</div>
-            <div class="champion-icon section3 row1 icon6">Jax</div>
-            <div class="champion-icon section3 row1 icon7">Jayce</div>
+            <div class="champion-icon section3 row1 icon1" id="42" onclick="changeop(this.id)">Illaoi</div>
+            <div class="champion-icon section3 row1 icon2" id="43" onclick="changeop(this.id)">Irelia</div>
+            <div class="champion-icon section3 row1 icon3" id="44" onclick="changeop(this.id)">Ivern</div>
+            <div class="champion-icon section3 row1 icon4" id="45" onclick="changeop(this.id)">Janna</div>
+            <div class="champion-icon section3 row1 icon5" id="46" onclick="changeop(this.id)">Jarvan IV</div>
+            <div class="champion-icon section3 row1 icon6" id="47" onclick="changeop(this.id)">Jax</div>
+            <div class="champion-icon section3 row1 icon7" id="48" onclick="changeop(this.id)">Jayce</div>
 
-            <div class="champion-icon section3 row2 icon1">Jhin</div>
-            <div class="champion-icon section3 row2 icon2">Jinx</div>
-            <div class="champion-icon section3 row2 icon3">K'Sante</div>
-            <div class="champion-icon section3 row2 icon4">Kai'Sa</div>
-            <div class="champion-icon section3 row2 icon5">Kalista</div>
-            <div class="champion-icon section3 row2 icon6">Karma</div>
-            <div class="champion-icon section3 row2 icon7">Karthus</div>
+            <div class="champion-icon section3 row2 icon1" id="49" onclick="changeop(this.id)">Jhin</div>
+            <div class="champion-icon section3 row2 icon2" id="50" onclick="changeop(this.id)">Jinx</div>
+            <div class="champion-icon section3 row2 icon3" id="51" onclick="changeop(this.id)">K'Sante</div>
+            <div class="champion-icon section3 row2 icon4" id="52" onclick="changeop(this.id)">Kai'Sa</div>
+            <div class="champion-icon section3 row2 icon5" id="53" onclick="changeop(this.id)">Kalista</div>
+            <div class="champion-icon section3 row2 icon6" id="54" onclick="changeop(this.id)">Karma</div>
+            <div class="champion-icon section3 row2 icon7" id="55" onclick="changeop(this.id)">Karthus</div>
 
-            <div class="champion-icon section3 row3 icon1">Kassadin</div>
-            <div class="champion-icon section3 row3 icon2">Katarina</div>
-            <div class="champion-icon section3 row3 icon3">Kayle</div>
-            <div class="champion-icon section3 row3 icon4">Kayn</div>
-            <div class="champion-icon section3 row3 icon5">Kennen</div>
-            <div class="champion-icon section3 row3 icon6">Kha'Zix</div>
-            <div class="champion-icon section3 row3 icon7">Kindred</div>
+            <div class="champion-icon section3 row3 icon1" id="56" onclick="changeop(this.id)">Kassadin</div>
+            <div class="champion-icon section3 row3 icon2" id="57" onclick="changeop(this.id)">Katarina</div>
+            <div class="champion-icon section3 row3 icon3" id="58" onclick="changeop(this.id)">Kayle</div>
+            <div class="champion-icon section3 row3 icon4" id="59" onclick="changeop(this.id)">Kayn</div>
+            <div class="champion-icon section3 row3 icon5" id="60" onclick="changeop(this.id)">Kennen</div>
+            <div class="champion-icon section3 row3 icon6" id="61" onclick="changeop(this.id)">Kha'Zix</div>
+            <div class="champion-icon section3 row3 icon7" id="62" onclick="changeop(this.id)">Kindred</div>
 
             <!-- section four of images -->
-            <div class="champion-icon section4 row1 icon1">Kled</div>
-            <div class="champion-icon section4 row1 icon2">Kog'Maw</div>
-            <div class="champion-icon section4 row1 icon3">LeBlanc</div>
-            <div class="champion-icon section4 row1 icon4">Lee Sin</div>
-            <div class="champion-icon section4 row1 icon5">Leona</div>
-            <div class="champion-icon section4 row1 icon6">Lillia</div>
-            <div class="champion-icon section4 row1 icon7">Lissandra</div>
+            <div class="champion-icon section4 row1 icon1" id="63" onclick="changeop(this.id)">Kled</div>
+            <div class="champion-icon section4 row1 icon2" id="64" onclick="changeop(this.id)">Kog'Maw</div>
+            <div class="champion-icon section4 row1 icon3" id="65" onclick="changeop(this.id)">LeBlanc</div>
+            <div class="champion-icon section4 row1 icon4" id="66" onclick="changeop(this.id)">Lee Sin</div>
+            <div class="champion-icon section4 row1 icon5" id="67" onclick="changeop(this.id)">Leona</div>
+            <div class="champion-icon section4 row1 icon6" id="68" onclick="changeop(this.id)">Lillia</div>
+            <div class="champion-icon section4 row1 icon7" id="69" onclick="changeop(this.id)">Lissandra</div>
 
-            <div class="champion-icon section4 row2 icon1">Lucian</div>
-            <div class="champion-icon section4 row2 icon2">Lulu</div>
-            <div class="champion-icon section4 row2 icon3">Lux</div>
-            <div class="champion-icon section4 row2 icon4">Malphite</div>
-            <div class="champion-icon section4 row2 icon5">Malzahar</div>
-            <div class="champion-icon section4 row2 icon6">Maokai</div>
-            <div class="champion-icon section4 row2 icon7">Master Yi</div>
+            <div class="champion-icon section4 row2 icon1" id="70" onclick="changeop(this.id)">Lucian</div>
+            <div class="champion-icon section4 row2 icon2" id="71" onclick="changeop(this.id)">Lulu</div>
+            <div class="champion-icon section4 row2 icon3" id="72" onclick="changeop(this.id)">Lux</div>
+            <div class="champion-icon section4 row2 icon4" id="73" onclick="changeop(this.id)">Malphite</div>
+            <div class="champion-icon section4 row2 icon5" id="74" onclick="changeop(this.id)">Malzahar</div>
+            <div class="champion-icon section4 row2 icon6" id="75" onclick="changeop(this.id)">Maokai</div>
+            <div class="champion-icon section4 row2 icon7" id="76" onclick="changeop(this.id)">Master Yi</div>
 
-            <div class="champion-icon section4 row3 icon1">Miss Fortune</div>
-            <div class="champion-icon section4 row3 icon2">Mordekaiser</div>
-            <div class="champion-icon section4 row3 icon3">Morgana</div>
-            <div class="champion-icon section4 row3 icon4">Nami</div>
-            <div class="champion-icon section4 row3 icon5">Nasus</div>
-            <div class="champion-icon section4 row3 icon6">Nautilus</div>
-            <div class="champion-icon section4 row3 icon7">Neeko</div>
+            <div class="champion-icon section4 row3 icon1" id="77" onclick="changeop(this.id)">Miss Fortune</div>
+            <div class="champion-icon section4 row3 icon2" id="78" onclick="changeop(this.id)">Mordekaiser</div>
+            <div class="champion-icon section4 row3 icon3" id="79" onclick="changeop(this.id)">Morgana</div>
+            <div class="champion-icon section4 row3 icon4" id="80" onclick="changeop(this.id)">Nami</div>
+            <div class="champion-icon section4 row3 icon5" id="81" onclick="changeop(this.id)">Nasus</div>
+            <div class="champion-icon section4 row3 icon6" id="82" onclick="changeop(this.id)">Nautilus</div>
+            <div class="champion-icon section4 row3 icon7" id="83" onclick="changeop(this.id)">Neeko</div>
 
             <!-- section five of images -->
-            <div class="champion-icon section5 row1 icon1">Nidalee</div>
-            <div class="champion-icon section5 row1 icon2">Nilah</div>
-            <div class="champion-icon section5 row1 icon3">Nocturne</div>
-            <div class="champion-icon section5 row1 icon4">Nunu & Willump</div>
-            <div class="champion-icon section5 row1 icon5">Olaf</div>
-            <div class="champion-icon section5 row1 icon6">Orianna</div>
-            <div class="champion-icon section5 row1 icon7">Ornn</div>
+            <div class="champion-icon section5 row1 icon1" id="84" onclick="changeop(this.id)">Nidalee</div>
+            <div class="champion-icon section5 row1 icon2" id="85" onclick="changeop(this.id)">Nilah</div>
+            <div class="champion-icon section5 row1 icon3" id="86" onclick="changeop(this.id)">Nocturne</div>
+            <div class="champion-icon section5 row1 icon4" id="87" onclick="changeop(this.id)">Nunu & Willump</div>
+            <div class="champion-icon section5 row1 icon5" id="88" onclick="changeop(this.id)">Olaf</div>
+            <div class="champion-icon section5 row1 icon6" id="89" onclick="changeop(this.id)">Orianna</div>
+            <div class="champion-icon section5 row1 icon7" id="90" onclick="changeop(this.id)">Ornn</div>
 
-            <div class="champion-icon section5 row2 icon1">Pantheon</div>
-            <div class="champion-icon section5 row2 icon2">Poppy</div>
-            <div class="champion-icon section5 row2 icon3">Pyke</div>
-            <div class="champion-icon section5 row2 icon4">Qiyana</div>
-            <div class="champion-icon section5 row2 icon5">Quinn</div>
-            <div class="champion-icon section5 row2 icon6">Rakan</div>
-            <div class="champion-icon section5 row2 icon7">Rammus</div>
+            <div class="champion-icon section5 row2 icon1" id="91" onclick="changeop(this.id)">Pantheon</div>
+            <div class="champion-icon section5 row2 icon2" id="92" onclick="changeop(this.id)">Poppy</div>
+            <div class="champion-icon section5 row2 icon3" id="93" onclick="changeop(this.id)">Pyke</div>
+            <div class="champion-icon section5 row2 icon4" id="94" onclick="changeop(this.id)">Qiyana</div>
+            <div class="champion-icon section5 row2 icon5" id="95" onclick="changeop(this.id)">Quinn</div>
+            <div class="champion-icon section5 row2 icon6" id="96" onclick="changeop(this.id)">Rakan</div>
+            <div class="champion-icon section5 row2 icon7" id="97" onclick="changeop(this.id)">Rammus</div>
 
-            <div class="champion-icon section5 row3 icon1">Rek'Sai</div>
-            <div class="champion-icon section5 row3 icon2">Rell</div>
-            <div class="champion-icon section5 row3 icon3">Renata Glasc</div>
-            <div class="champion-icon section5 row3 icon4">Renekton</div>
-            <div class="champion-icon section5 row3 icon5">Rengar</div>
-            <div class="champion-icon section5 row3 icon6">Riven</div>
-            <div class="champion-icon section5 row3 icon7">Rumble</div>
+            <div class="champion-icon section5 row3 icon1" id="98" onclick="changeop(this.id)">Rek'Sai</div>
+            <div class="champion-icon section5 row3 icon2" id="99" onclick="changeop(this.id)">Rell</div>
+            <div class="champion-icon section5 row3 icon3" id="100" onclick="changeop(this.id)">Renata Glasc</div>
+            <div class="champion-icon section5 row3 icon4" id="101" onclick="changeop(this.id)">Renekton</div>
+            <div class="champion-icon section5 row3 icon5" id="102" onclick="changeop(this.id)">Rengar</div>
+            <div class="champion-icon section5 row3 icon6" id="103" onclick="changeop(this.id)">Riven</div>
+            <div class="champion-icon section5 row3 icon7" id="104" onclick="changeop(this.id)">Rumble</div>
 
             <!-- section six of images -->
-            <div class="champion-icon section6 row1 icon1">Ryze</div>
-            <div class="champion-icon section6 row1 icon2">Samira</div>
-            <div class="champion-icon section6 row1 icon3">Sejuani</div>
-            <div class="champion-icon section6 row1 icon4">Senna</div>
-            <div class="champion-icon section6 row1 icon5">Seraphine</div>
-            <div class="champion-icon section6 row1 icon6">Sett</div>
-            <div class="champion-icon section6 row1 icon7">Shaco</div>
+            <div class="champion-icon section6 row1 icon1" id="105" onclick="changeop(this.id)">Ryze</div>
+            <div class="champion-icon section6 row1 icon2" id="106" onclick="changeop(this.id)">Samira</div>
+            <div class="champion-icon section6 row1 icon3" id="107" onclick="changeop(this.id)">Sejuani</div>
+            <div class="champion-icon section6 row1 icon4" id="108" onclick="changeop(this.id)">Senna</div>
+            <div class="champion-icon section6 row1 icon5" id="109" onclick="changeop(this.id)">Seraphine</div>
+            <div class="champion-icon section6 row1 icon6" id="110" onclick="changeop(this.id)">Sett</div>
+            <div class="champion-icon section6 row1 icon7" id="111" onclick="changeop(this.id)">Shaco</div>
 
-            <div class="champion-icon section6 row2 icon1">Shen</div>
-            <div class="champion-icon section6 row2 icon2">Shyvana</div>
-            <div class="champion-icon section6 row2 icon3">Singed</div>
-            <div class="champion-icon section6 row2 icon4">Sion</div>
-            <div class="champion-icon section6 row2 icon5">Sivir</div>
-            <div class="champion-icon section6 row2 icon6">Skarner</div>
-            <div class="champion-icon section6 row2 icon7">Sona</div>
+            <div class="champion-icon section6 row2 icon1" id="112" onclick="changeop(this.id)">Shen</div>
+            <div class="champion-icon section6 row2 icon2" id="113" onclick="changeop(this.id)">Shyvana</div>
+            <div class="champion-icon section6 row2 icon3" id="114" onclick="changeop(this.id)">Singed</div>
+            <div class="champion-icon section6 row2 icon4" id="115" onclick="changeop(this.id)">Sion</div>
+            <div class="champion-icon section6 row2 icon5" id="116" onclick="changeop(this.id)">Sivir</div>
+            <div class="champion-icon section6 row2 icon6" id="117" onclick="changeop(this.id)">Skarner</div>
+            <div class="champion-icon section6 row2 icon7" id="118" onclick="changeop(this.id)">Sona</div>
 
-            <div class="champion-icon section6 row3 icon1">Soraka</div>
-            <div class="champion-icon section6 row3 icon2">Swain</div>
-            <div class="champion-icon section6 row3 icon3">Sylas</div>
-            <div class="champion-icon section6 row3 icon4">Syndra</div>
-            <div class="champion-icon section6 row3 icon5">Tahm Kench</div>
-            <div class="champion-icon section6 row3 icon6">Taliyah</div>
-            <div class="champion-icon section6 row3 icon7">Talon</div>
+            <div class="champion-icon section6 row3 icon1" id="119" onclick="changeop(this.id)">Soraka</div>
+            <div class="champion-icon section6 row3 icon2" id="120" onclick="changeop(this.id)">Swain</div>
+            <div class="champion-icon section6 row3 icon3" id="121" onclick="changeop(this.id)">Sylas</div>
+            <div class="champion-icon section6 row3 icon4" id="122" onclick="changeop(this.id)">Syndra</div>
+            <div class="champion-icon section6 row3 icon5" id="123" onclick="changeop(this.id)">Tahm Kench</div>
+            <div class="champion-icon section6 row3 icon6" id="124" onclick="changeop(this.id)">Taliyah</div>
+            <div class="champion-icon section6 row3 icon7" id="125" onclick="changeop(this.id)">Talon</div>
 
             <!-- section seven of images -->
-            <div class="champion-icon section7 row1 icon1">Taric</div>
-            <div class="champion-icon section7 row1 icon2">Teemo</div>
-            <div class="champion-icon section7 row1 icon3">Thresh</div>
-            <div class="champion-icon section7 row1 icon4">Tristana</div>
-            <div class="champion-icon section7 row1 icon5">Trundle</div>
-            <div class="champion-icon section7 row1 icon6">Tryndamere</div>
-            <div class="champion-icon section7 row1 icon7">Twisted Fate</div>
+            <div class="champion-icon section7 row1 icon1" id="126" onclick="changeop(this.id)">Taric</div>
+            <div class="champion-icon section7 row1 icon2" id="127" onclick="changeop(this.id)">Teemo</div>
+            <div class="champion-icon section7 row1 icon3" id="128" onclick="changeop(this.id)">Thresh</div>
+            <div class="champion-icon section7 row1 icon4" id="129" onclick="changeop(this.id)">Tristana</div>
+            <div class="champion-icon section7 row1 icon5" id="130" onclick="changeop(this.id)">Trundle</div>
+            <div class="champion-icon section7 row1 icon6" id="131" onclick="changeop(this.id)">Tryndamere</div>
+            <div class="champion-icon section7 row1 icon7" id="132" onclick="changeop(this.id)">Twisted Fate</div>
 
-            <div class="champion-icon section7 row2 icon1">Twitch</div>
-            <div class="champion-icon section7 row2 icon2">Udyr</div>
-            <div class="champion-icon section7 row2 icon3">Urgot</div>
-            <div class="champion-icon section7 row2 icon4">Varus</div>
-            <div class="champion-icon section7 row2 icon5">Vayne</div>
-            <div class="champion-icon section7 row2 icon6">Veigar</div>
-            <div class="champion-icon section7 row2 icon7">Vel'Koz</div>
+            <div class="champion-icon section7 row2 icon1" id="133" onclick="changeop(this.id)">Twitch</div>
+            <div class="champion-icon section7 row2 icon2" id="134" onclick="changeop(this.id)">Udyr</div>
+            <div class="champion-icon section7 row2 icon3" id="135" onclick="changeop(this.id)">Urgot</div>
+            <div class="champion-icon section7 row2 icon4" id="136" onclick="changeop(this.id)">Varus</div>
+            <div class="champion-icon section7 row2 icon5" id="137" onclick="changeop(this.id)">Vayne</div>
+            <div class="champion-icon section7 row2 icon6" id="138" onclick="changeop(this.id)">Veigar</div>
+            <div class="champion-icon section7 row2 icon7" id="139" onclick="changeop(this.id)">Vel'Koz</div>
 
-            <div class="champion-icon section7 row3 icon1">Vex</div>
-            <div class="champion-icon section7 row3 icon2">Vi</div>
-            <div class="champion-icon section7 row3 icon3">Viego</div>
-            <div class="champion-icon section7 row3 icon4">Viktor</div>
-            <div class="champion-icon section7 row3 icon5">Vladimir</div>
-            <div class="champion-icon section7 row3 icon6">Volibear</div>
-            <div class="champion-icon section7 row3 icon7">Warwick</div>
+            <div class="champion-icon section7 row3 icon1" id="140" onclick="changeop(this.id)">Vex</div>
+            <div class="champion-icon section7 row3 icon2" id="141" onclick="changeop(this.id)">Vi</div>
+            <div class="champion-icon section7 row3 icon3" id="142" onclick="changeop(this.id)">Viego</div>
+            <div class="champion-icon section7 row3 icon4" id="143" onclick="changeop(this.id)">Viktor</div>
+            <div class="champion-icon section7 row3 icon5" id="144" onclick="changeop(this.id)">Vladimir</div>
+            <div class="champion-icon section7 row3 icon6" id="145" onclick="changeop(this.id)">Volibear</div>
+            <div class="champion-icon section7 row3 icon7" id="146" onclick="changeop(this.id)">Warwick</div>
 
             <!-- section eight of images -->
-            <div class="champion-icon section8 row1 icon1">Wukong</div>
-            <div class="champion-icon section8 row1 icon2">Xayah</div>
-            <div class="champion-icon section8 row1 icon3">Xerath</div>
-            <div class="champion-icon section8 row1 icon4">Xin Zhao</div>
-            <div class="champion-icon section8 row1 icon5">Yasuo</div>
-            <div class="champion-icon section8 row1 icon6">Yone</div>
-            <div class="champion-icon section8 row1 icon7">Yorick</div>
+            <div class="champion-icon section8 row1 icon1" id="147" onclick="changeop(this.id)">Wukong</div>
+            <div class="champion-icon section8 row1 icon2" id="148" onclick="changeop(this.id)">Xayah</div>
+            <div class="champion-icon section8 row1 icon3" id="149" onclick="changeop(this.id)">Xerath</div>
+            <div class="champion-icon section8 row1 icon4" id="150" onclick="changeop(this.id)">Xin Zhao</div>
+            <div class="champion-icon section8 row1 icon5" id="151" onclick="changeop(this.id)">Yasuo</div>
+            <div class="champion-icon section8 row1 icon6" id="152" onclick="changeop(this.id)">Yone</div>
+            <div class="champion-icon section8 row1 icon7" id="153" onclick="changeop(this.id)">Yorick</div>
 
-            <div class="champion-icon section8 row2 icon1">Yuumi</div>
-            <div class="champion-icon section8 row2 icon2">Zac</div>
-            <div class="champion-icon section8 row2 icon3">Zed</div>
-            <div class="champion-icon section8 row2 icon4">Zeri</div>
-            <div class="champion-icon section8 row2 icon5">Ziggs</div>
-            <div class="champion-icon section8 row2 icon6">Zilean</div>
-            <div class="champion-icon section8 row2 icon7">Zoe</div>
+            <div class="champion-icon section8 row2 icon1" id="154" onclick="changeop(this.id)">Yuumi</div>
+            <div class="champion-icon section8 row2 icon2" id="155" onclick="changeop(this.id)">Zac</div>
+            <div class="champion-icon section8 row2 icon3" id="156" onclick="changeop(this.id)">Zed</div>
+            <div class="champion-icon section8 row2 icon4" id="157" onclick="changeop(this.id)">Zeri</div>
+            <div class="champion-icon section8 row2 icon5" id="158" onclick="changeop(this.id)">Ziggs</div>
+            <div class="champion-icon section8 row2 icon6" id="159" onclick="changeop(this.id)">Zilean</div>
+            <div class="champion-icon section8 row2 icon7" id="160" onclick="changeop(this.id)">Zoe</div>
                 
-            <div class="champion-icon section8 row3 icon1">Zyra</div>
+            <div class="champion-icon section8 row3 icon1" id="161" onclick="changeop(this.id)">Zyra</div>
         </div>
+
+        <div class="go-top"><a href="/index.html#top">GO TOP</a></div>
 </body>
 </html>
