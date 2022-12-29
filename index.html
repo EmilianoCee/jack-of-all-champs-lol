@@ -14,19 +14,19 @@
                 <h1>Jack of All Champs</h1>
                 <nav>
                     <div class="roles">
-                        <div class="top-role" id="top">
-                            <a href="#"><img src="/images/top-icon.png" alt="top lane role icon"></a>
+                        <div class="top-role role" id="top" onclick="sortRole()">
+                            <img src="/images/top-icon.png" alt="top lane role icon">top
                         </div>
-                        <div class="jungle-role">
-                            <a href="#"><img src="/images/jungle-icon.png" alt="jungle role icon"></a>
+                        <div class="jungle-role role" onclick="sortRole()">
+                            <img src="/images/jungle-icon.png" alt="jungle role icon">jungle
                         </div>
-                        <div class="middle-role">
+                        <div class="middle-role role" >
                             <a href="#"><img src="/images/mid-icon.png" alt="jungle role icon"></a>
                         </div>
-                        <div class="bottom-role">
+                        <div class="bottom-role role">
                             <a href="#"><img src="/images/bottom-icon.png" alt="jungle role icon"></a>
                         </div>
-                        <div class="support-role">
+                        <div class="support-role role">
                             <a href="#"><img src="/images/support-icon.png" alt="jungle role icon"></a>
                         </div>
                     </div>
@@ -37,33 +37,33 @@
                 </nav>
 
                 <div class="manual-select">
-                    <button onclick="removeClass()">select</button>
+                    <button>select</button>
                 </div>
             </div>
         </div>
         <div class="champions">
             <!-- section one of images -->
-            <div class="champion-icon section1 row1 icon1 active top" id="Aatrox">Aatrox</div>
-            <div class="champion-icon section1 row1 icon2 active">Ahri</div>
-            <div class="champion-icon section1 row1 icon3 active">Akali</div>
-            <div class="champion-icon section1 row1 icon4">Akshan</div>
-            <div class="champion-icon section1 row1 icon5">Alistar</div>
-            <div class="champion-icon section1 row1 icon6">Amumu</div>
-            <div class="champion-icon section1 row1 icon7">Anivia</div>
+            <div class="champion-icon section1 row1 icon1" id="0">Aatrox top </div>
+            <div class="champion-icon section1 row1 icon2" id="1" onclick="changeop(this.id)">Ahri middle</div>
+            <div class="champion-icon section1 row1 icon3" id="2" onclick="changeop(this.id)">Akali middle top</div>
+            <div class="champion-icon section1 row1 icon4" id="3">Akshan</div>
+            <div class="champion-icon section1 row1 icon5" id="4">Alistar</div>
+            <div class="champion-icon section1 row1 icon6" id="5">Amumu</div>
+            <div class="champion-icon section1 row1 icon7" id="6" onclick="changeop(this.id)">Anivia</div>
 
-            <div class="champion-icon section1 row2 icon1">Annie</div>
-            <div class="champion-icon section1 row2 icon2">Aphelios</div>
-            <div class="champion-icon section1 row2 icon3">Ashe</div>
-            <div class="champion-icon section1 row2 icon4">Aurelion Sol</div>
-            <div class="champion-icon section1 row2 icon5">Azir</div>
-            <div class="champion-icon section1 row2 icon6">Bard</div>
+            <div class="champion-icon section1 row2 icon1" id="7" onclick="changeop(this.id)">Annie</div>
+            <div class="champion-icon section1 row2 icon2" id="8">Aphelios</div>
+            <div class="champion-icon section1 row2 icon3" id="9" >Ashe</div>
+            <div class="champion-icon section1 row2 icon4" id="10">Aurelion Sol</div>
+            <div class="champion-icon section1 row2 icon5" id="11">Azir</div>
+            <div class="champion-icon section1 row2 icon6" id="12">Bard</div>
             <div class="champion-icon section1 row2 icon7">Bel'Veth</div>
 
             <div class="champion-icon section1 row3 icon1">Blitzcrank</div>
             <div class="champion-icon section1 row3 icon2">Brand</div>
             <div class="champion-icon section1 row3 icon3">Braum</div>
             <div class="champion-icon section1 row3 icon4">Caitlyn</div>
-            <div class="champion-icon section1 row3 icon5 top">Camille</div>
+            <div class="champion-icon section1 row3 icon5">Camille</div>
             <div class="champion-icon section1 row3 icon6">Cassiopeia</div>
             <div class="champion-icon section1 row3 icon7">Cho'Gath</div>
 

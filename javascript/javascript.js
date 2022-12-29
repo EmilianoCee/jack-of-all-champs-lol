@@ -75,8 +75,9 @@
 
 function searchChamp() {
     let input = document.getElementById("search").value
-    input=input.toLowerCase();
+    input = input.toLowerCase();
     let x = document.getElementsByClassName("champion-icon");
+    console.log(input)
       
     for (i = 0; i < x.length; i++) { 
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
@@ -85,21 +86,85 @@ function searchChamp() {
         }
         else {
             x[i].style.display="flex";
-            console.log(x[i]);                 
         }
     }
 }
 
 // function sortRole() {
-//     let input = document.getElementById("top")
+//     let input = document.getElementById("top").innerText
 //     let x = document.getElementsByClassName("champion-icon")
-    
+//     console.log(input)
+
 //     for (i = 0; i < x.length; i++) { 
-//         if (!x[i].includes(input)) {
+//         if (!x[i].innerHTML.includes(input)) {
 //             x[i].style.display="none";
 //         }
 //         else {
-//             x[i].style.display="block";                 
+//             x[i].style.display="flex";                 
 //         }
 //     }
 // }
+
+function sortRole() {
+    let input = document.getElementById("top").innerText
+    input = document.getElementById("search").value;
+}
+
+// function sortRole() {
+//     let input = document.getElementById("top").innerText
+//     input=input.toLowerCase();
+//     let x = document.getElementsByClassName("champion-icon");
+//     console.log(input)
+      
+//     for (i = 0; i < x.length; i++) { 
+//         if (!x[i].innerHTML.toLowerCase().includes(input)) {
+//             x[i].style.opacity=".25";
+            
+//         }
+//         else {
+//             x[i].style.display="flex";     
+//             console.log(x[i])          
+//         }
+//     }
+// }
+
+
+
+// function gatherId(clickedId) {
+//     console.log(clickedId)
+// }
+
+// const icon = document.getElementById(9);
+
+// let toggle = true;
+// icon.addEventListener("click", function(){
+    
+//     toggle = !toggle;
+//         if(toggle){
+//             icon.style.opacity = "100%";
+//         }else{
+//             icon.style.opacity = "25%";
+//         }
+// })
+
+
+
+
+
+// WORKING TOGGLE, cons: have to add function to every icon
+function gatherId(clickedId) {
+    console.log(clickedId)
+    changeop(clickedId)
+}
+
+var toggle = false;
+
+function changeop(clickedId) {
+    if (toggle === true ) {
+        document.getElementById(clickedId).style.opacity = "100%"
+    } else {
+        document.getElementById(clickedId).style.opacity = "25%"
+    }
+    toggle = !toggle;
+}
+
