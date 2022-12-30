@@ -1,78 +1,3 @@
-// const champTemplate = document.querySelector("[champ-data-template]")
-// const champContainer = document.querySelector("[data-container]")
-
-// fetch("http://ddragon.leagueoflegends.com/cdn/12.6.1/data/en_US/champion.json")
-//     .then(res => res.json())
-//     .then(data => {
-//         data.forEach(champions => {
-//             const champ = champTemplate.content.cloneNode(true).children[0]
-//             const name = champ.querySelector("[data-name]")
-//             name.textContent = champion.name
-//             champContainer.append(champ)
-//         })
-//     })
-
-
-
-// fetch("https://jsonplaceholder.typicode.com/users/")
-//     .then(res => res.json())
-//     .then(data => console.log(data))
-
-// fetch("http://ddragon.leagueoflegends.com/cdn/12.6.1/data/en_US/champion.json")
-//     .then(res => res.json())
-//     .then(data => console.log(data))
-
-// const userCardTemplate = document.querySelector("[data-user-template]")
-// const userCardContainer = document.querySelector("[data-user-cards-container]")
-
-// fetch("http://ddragon.leagueoflegends.com/cdn/12.6.1/data/en_US/champion.json")
-//     .then(res => res.json())
-//     .then(data => {
-//         data.forEach(user => {
-//             const card = userCardTemplate.content.cloneNode(true).children[0]
-//             const header = card.querySelector("[data-header]")
-//             const body = card.querySelector("[data-body]")
-//             header.textContent = user.name
-//             body.textContent = user.email
-//             userCardContainer.append(card)
-//         })
-//     })
-
-// function removeClass() {
-//     var element = document.getElementById("Aatrox");
-//     element.classList.remove("active");
-// }
-
-// const searchInput = document.querySelector("[data-search")
-
-// searchInput.addEventListener("input", e => {
-//     const value = e.target.value
-//     console.log(value)
-// })
-
-// let champs = []
-
-// const collection = document.getElementsByClassName("champion-icon");
-// console.log(collection[2].innerHTML);
-
-
-// searchInput.addEventListener("input", e => {
-//     const value = e.target.value
-//     console.log(value)
-// })
-
-// let champs = []
-
-// var collection = document.getElementsByClassName("champion-icon");
-// console.log(collection[0].innerHTML);
-
-// function champList() {
-//     for ( var i = 0 ; i < collection.length ; i++ )
-//         champs.push( collection[i].innerHTML );
-// };
-
-// console.log(champs[2])
-
 function searchChamp() {
     let input = document.getElementById("search").value
     input = input.toLowerCase();
@@ -89,68 +14,14 @@ function searchChamp() {
     }
 }
 
-// function sortRole() {
-//     let input = document.getElementById("top").innerText
-//     let x = document.getElementsByClassName("champion-icon")
-//     console.log(input)
-
-//     for (i = 0; i < x.length; i++) { 
-//         if (!x[i].innerHTML.includes(input)) {
-//             x[i].style.display="none";
-//         }
-//         else {
-//             x[i].style.display="flex";                 
-//         }
-//     }
-// }
 
 function sortRole() {
     let input = document.getElementById("top").innerText
     input = document.getElementById("search").value;
 }
 
-// function sortRole() {
-//     let input = document.getElementById("top").innerText
-//     input=input.toLowerCase();
-//     let x = document.getElementsByClassName("champion-icon");
-//     console.log(input)
-      
-//     for (i = 0; i < x.length; i++) { 
-//         if (!x[i].innerHTML.toLowerCase().includes(input)) {
-//             x[i].style.opacity=".25";
-            
-//         }
-//         else {
-//             x[i].style.display="flex";     
-//             console.log(x[i])          
-//         }
-//     }
-// }
 
-
-
-// function gatherId(clickedId) {
-//     console.log(clickedId)
-// }
-
-// const icon = document.getElementById(9);
-
-// let toggle = true;
-// icon.addEventListener("click", function(){
-    
-//     toggle = !toggle;
-//         if(toggle){
-//             icon.style.opacity = "100%";
-//         }else{
-//             icon.style.opacity = "25%";
-//         }
-// })
-
-
-
-
-
-// WORKING TOGGLE, cons: have to add function to every icon
+// Toggle for champ icons
 function gatherId(clickedId) {
     changeop(clickedId)
 }
@@ -167,8 +38,7 @@ function changeop(clickedId) {
 }
 
 
-// need to change index everytime stylesheet is updated
-
+// make sure index of champion grid does not change
 function infColumns(){
     const stylesheet = document.styleSheets[0];
     console.log(stylesheet);
@@ -187,4 +57,22 @@ function sevenColumns(){
     elementRules = stylesheet.cssRules[2];
 
     elementRules.style.setProperty("grid-template-columns", "repeat(7, 1fr)");
+}
+
+function toggleMenu() {
+    const menu = document.querySelector(".menu");
+
+    if (menu.classList.contains("show-menu")) {
+        menu.classList.remove("show-menu")
+        document.querySelector(".close-icon").style.display = "none";
+        document.querySelector(".burger-icon").style.display = "block";
+        menu.style.display = "none";
+        document.styleSheets[0].cssRules[5].style.setProperty("display", "flex");
+    } else {
+        menu.classList.add("show-menu")
+        document.querySelector(".close-icon").style.display = "block";
+        document.querySelector(".burger-icon").style.display = "none";
+        menu.style.display = "flex";
+        document.styleSheets[0].cssRules[5].style.setProperty("display", "none");
+    }
 }

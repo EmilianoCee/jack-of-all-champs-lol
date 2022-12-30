@@ -8,11 +8,11 @@
     <script src="/javascript/javascript.js" defer></script>
     <title>Jack of All Champs</title>
 </head>
-<body>
-        <div class="header">
+<body >
+        <div class="header" id="tip">
             <div class="divider">
-                <h1>Jack of All Champs</h1>
-                <nav>
+                <h1 class="non-menu">Jack of All Champs</h1>
+                <nav class="non-menu">
                     <div class="roles">
                         <div class="top-role role" id="top" onclick="sortRole(top)">
                             <img src="/images/top-icon.png" alt="top lane role icon">
@@ -37,9 +37,15 @@
                     </div>
                 </nav>
 
-                <div class="settings">
-                    <button onclick="infColumns()">Max Columns</button>
-                    <button onclick="sevenColumns()">Seven Columns</button>
+                <ul class="menu">
+                    <li><button class="menu-item"onclick="infColumns()">Max Columns</button></li>
+                    <li><button class="menu-item" onclick="sevenColumns()">Seven Columns</button></li>
+                    <li><button class="menu-item" onclick="window.location.href='/index.html#go-top'">Go to bottom</button></li>
+                </ul>
+
+                <div class="hamburger" onclick="toggleMenu()">
+                    <img class="burger-icon" src="/images/hamburger-icon.png" alt="" >
+                    <img class="close-icon" src="/images/arrow-icon.png" alt="" >
                 </div>
             </div>
         </div>
@@ -239,6 +245,6 @@
             <div class="champion-icon section8 row3 icon1" id="161" onclick="changeop(this.id)">Zyra</div>
         </div>
 
-        <div class="go-top"><a href="/index.html#top">GO TOP</a></div>
+        <div id="go-top"><a href="/index.html#tip"><img src="/images/arrow-icon.png" alt=""></a></div>
 </body>
 </html>
