@@ -14,35 +14,18 @@ function searchChamp() {
             x[i].style.display="flex";
         }
     }
+
+    checkRole();
 }
 
-// function sortRole() {
-//     let input = document.getElementById("search").value
-//     input = input.toLowerCase();
-//     let x = document.getElementsByClassName("role");
-
-//     if (toggle === true ) {
-//         document.getElementById(clickedId).style.opacity = "100%"
-//     } else {
-//         document.getElementById(clickedId).style.opacity = "25%"
-//     }
-//     toggle = !toggle;
-// }
 
 function sortRole(clickedId) {
     let input = document.getElementById("search").value;
     let x = document.getElementById(clickedId);
     document.getElementById("search").value = x.innerText;
     searchChamp();
+    
 }
-
-
-
-// Toggle for champ icons
-// function gatherId(clickedId) {
-//     changeop(clickedId)
-// }
-
 
 function changeop(clickedId) {
     if (toggle === true ) {
@@ -51,6 +34,23 @@ function changeop(clickedId) {
         document.getElementById(clickedId).style.opacity = "25%";
     }
     toggle = !toggle;
+}
+
+function checkRole () {
+    let input = document.getElementById("search").value;
+    input = input.toLowerCase();
+    let x = document.getElementsByClassName("role");
+      
+    for (i = 0; i < x.length; i++) { 
+        if (x[i].innerText == input) {
+            x[i].style.opacity="100%";
+            x[i].style.borderBottom = "solid 8px rgb(120, 90, 40)";
+        }
+        else {
+            x[i].style.opacity = "35%";
+            x[i].style.borderBottom = " solid 8px rgba(120, 90, 40, 0)";
+        }
+    }
 }
 
 

@@ -84,12 +84,17 @@ nav {
 .role:hover {
     opacity: 100%;
     cursor: pointer;
-    /* border-bottom: solid 8px rgb(120, 90, 40); */
+
+}
+
+.hover {
+    opacity: 100%;
+    cursor: pointer;
 }
 
 .role:active {
     opacity: 100%;
-    border-bottom: solid 8px rgb(120, 90, 40);
+    
 }
 
 img[src*="icon"] {
