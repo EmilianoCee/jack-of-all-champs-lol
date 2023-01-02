@@ -36,6 +36,33 @@ function changeop(clickedId) {
     toggle = !toggle;
 }
 
+function toggleAll() {
+    let x = document.getElementsByClassName("champion-icon")
+    for (i = 0; i < x.length; i++) { 
+        if (toggle === true ) {
+            x[i].style.opacity = "100%";
+        }
+        else {
+            x[i].style.opacity = "25%";
+        }
+    }
+    toggle = !toggle;
+}
+
+// function reduceAll() {
+//     let x = document.getElementsByClassName("champion-icon")
+//     for (i = 0; i < x.length; i++){
+//         x[i].style.opacity = "25%";
+//     };
+// }
+
+// function addAll() {
+//     let x = document.getElementsByClassName("champion-icon")
+//     for (i = 0; i < x.length; i++){
+//         x[i].style.opacity = "100%";
+//     };
+// }
+
 function checkRole () {
     let input = document.getElementById("search").value;
     input = input.toLowerCase();
@@ -54,26 +81,43 @@ function checkRole () {
 }
 
 
+
 // make sure index of champion grid does not change
-function infColumns(){
+
+// function infColumns(){
+//     const stylesheet = document.styleSheets[0];
+//     console.log(stylesheet);
+//     let elementRules;
+
+//     elementRules = stylesheet.cssRules[2];
+
+//     elementRules.style.setProperty("grid-template-columns", "repeat(auto-fill, minmax(100px, 1fr))");
+// }
+
+// function sevenColumns(){
+//     const stylesheet = document.styleSheets[0];
+//     console.log(stylesheet);
+//     let elementRules;
+
+//     elementRules = stylesheet.cssRules[2];
+
+//     elementRules.style.setProperty("grid-template-columns", "repeat(7, 1fr)");
+// }
+
+function toggleColumns() {
     const stylesheet = document.styleSheets[0];
     console.log(stylesheet);
     let elementRules;
-
     elementRules = stylesheet.cssRules[2];
-
-    elementRules.style.setProperty("grid-template-columns", "repeat(auto-fill, minmax(100px, 1fr))");
+        if (toggle === true ) {
+            elementRules.style.setProperty("grid-template-columns", "repeat(7, 1fr)");
+        }
+        else {
+            elementRules.style.setProperty("grid-template-columns", "repeat(auto-fill, minmax(100px, 1fr))");
+        }
+    toggle = !toggle;
 }
 
-function sevenColumns(){
-    const stylesheet = document.styleSheets[0];
-    console.log(stylesheet);
-    let elementRules;
-
-    elementRules = stylesheet.cssRules[2];
-
-    elementRules.style.setProperty("grid-template-columns", "repeat(7, 1fr)");
-}
 
 function toggleMenu() {
     const menu = document.querySelector(".menu");
