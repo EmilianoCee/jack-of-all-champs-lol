@@ -1,3 +1,30 @@
+loadStorage();
+
+function beginStorage () {
+    for (z = 0; z < 162; z++)
+    window.localStorage.setItem(JSON.stringify(z),
+    "1")
+}
+
+function loadStorage() {
+    for (z = 0; z < localStorage.length; z++) {
+        const value = localStorage.getItem(z);
+        console.log(value);
+        document.getElementById(z).style.opacity = value;
+    }
+
+}
+
+
+
+function checkStorage() { 
+    if (localStorage.z) {
+        document.getElementById(z).style.opacity = "100%";
+    } else {
+        document.getElementById(z).style.opacity = "50%";
+    }
+}
+
 var toggle = false;
 
 function searchChamp() {
@@ -28,10 +55,15 @@ function sortRole(clickedId) {
 }
 
 function changeop(clickedId) {
+    z = clickedId
     if (toggle === true ) {
         document.getElementById(clickedId).style.opacity = "100%";
+        localStorage.setItem(JSON.parse(document.getElementById(clickedId).id), 
+        "1")
     } else {
         document.getElementById(clickedId).style.opacity = "25%";
+        localStorage.setItem(JSON.parse(document.getElementById(clickedId).id), 
+        ".25")
     }
     toggle = !toggle;
 }
@@ -41,9 +73,13 @@ function toggleAll() {
     for (i = 0; i < x.length; i++) { 
         if (toggle === true ) {
             x[i].style.opacity = "100%";
+            localStorage.setItem(JSON.parse(x[i]), 
+        "1")
         }
         else {
             x[i].style.opacity = "25%";
+            localStorage.setItem(JSON.parse(x[i]), 
+        ".25")
         }
     }
     toggle = !toggle;
