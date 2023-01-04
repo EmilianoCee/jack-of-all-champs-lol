@@ -3,19 +3,18 @@ loadStorage();
 function beginStorage () {
     for (z = 0; z < 162; z++)
     window.localStorage.setItem(JSON.stringify(z),
-    "1")
+    "1");
+    window.localStorage.setItem("begin", "none");
+    document.getElementById("beginButton").style.display = localStorage.begin;
 }
 
 function loadStorage() {
-    for (z = 0; z < localStorage.length; z++) {
+    for (z = 0; z < 162; z++) {
         const value = localStorage.getItem(z);
-        console.log(value);
         document.getElementById(z).style.opacity = value;
     }
-
+    document.getElementById("beginButton").style.display = localStorage.begin;
 }
-
-
 
 function checkStorage() { 
     if (localStorage.z) {
@@ -55,7 +54,6 @@ function sortRole(clickedId) {
 }
 
 function changeop(clickedId) {
-    z = clickedId
     if (toggle === true ) {
         document.getElementById(clickedId).style.opacity = "100%";
         localStorage.setItem(JSON.parse(document.getElementById(clickedId).id), 
@@ -73,12 +71,12 @@ function toggleAll() {
     for (i = 0; i < x.length; i++) { 
         if (toggle === true ) {
             x[i].style.opacity = "100%";
-            localStorage.setItem(JSON.parse(x[i]), 
+            localStorage.setItem(JSON.parse(x[i].id), 
         "1")
         }
         else {
             x[i].style.opacity = "25%";
-            localStorage.setItem(JSON.parse(x[i]), 
+            localStorage.setItem(JSON.parse(x[i].id), 
         ".25")
         }
     }
