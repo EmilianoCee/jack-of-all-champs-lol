@@ -48,8 +48,9 @@ function sortRole(clickedId) {
 
 function changeop(clickedId) {
     var element = document.getElementById(clickedId)
-    console.log(toggle);
-    if (toggle === true ) {
+    var op = element.style.opacity;
+    console.log(op);
+    if (op == 0.25) {
         element.style.opacity = "100%";
         localStorage.setItem(JSON.parse(element.id),  "1")
         element.classList.remove("done");
@@ -135,7 +136,6 @@ function checkRole () {
 
 function toggleColumns() {
     const stylesheet = document.styleSheets[0];
-    console.log(stylesheet);
     let elementRules;
     elementRules = stylesheet.cssRules[2];
         if (toggle === true ) {
