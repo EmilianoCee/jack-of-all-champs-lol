@@ -38,13 +38,13 @@
                     </div>
                 </nav>
 
-                <button class="non-menu menu-item" id="beginButton" onclick="beginStorage()">Begin!</button>
+                <!-- <button class="non-menu menu-item" id="beginButton" onclick="beginStorage()">Begin!</button> -->
 
                 <ul class="menu">
-                    <li><button class="menu-item"onclick="toggleColumns()">Toggle Columns</button></li>
-                    <li><button class="menu-item" onclick="toggleAll()">Toggle All</button></li>
+                    <li><button class="menu-item" id="column-button" onclick="toggleColumns()">Max Columns</button></li>
+                    <li><button class="menu-item" id="enable-button" onclick="toggleAll()">Toggle All</button></li>
+                    <li><button class="menu-item" id="visiblity-button" onclick="toggleVisibility()">Toggle Visibility</button></li>
                     <li><button class="menu-item" onclick="window.location.href='/index.html#go-top'">Go to Bottom</button></li>
-                    <li><button class="menu-item" onclick="loadStorage()">Load Data</button></li>
                 </ul>
 
                 <div class="hamburger" onclick="toggleMenu()">
@@ -191,7 +191,7 @@
             <div class="champion-icon section6 row2 icon1" id="112" onclick="changeop(this.id)">Shen top </div>
             <div class="champion-icon section6 row2 icon2" id="113" onclick="changeop(this.id)">Shyvana jungle </div>
             <div class="champion-icon section6 row2 icon3" id="114" onclick="changeop(this.id)">Singed top </div>
-            <div class="champion-icon section6 row2 icon4" id="115" onclick="changeop(this.id)">Sion top jungle bottom support </div>
+            <div class="champion-icon section6 row2 icon4" id="115" onclick="changeop(this.id)">Sion top </div>
             <div class="champion-icon section6 row2 icon5" id="116" onclick="changeop(this.id)">Sivir bottom </div>
             <div class="champion-icon section6 row2 icon6" id="117" onclick="changeop(this.id)">Skarner jungle </div>
             <div class="champion-icon section6 row2 icon7" id="118" onclick="changeop(this.id)">Sona support </div>
