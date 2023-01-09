@@ -205,7 +205,7 @@ button {
     width: 100px;
     height: 130px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
     color: rgba(0, 0, 0, .0);
 }
@@ -222,8 +222,14 @@ button {
     opacity: 100%;
 }
 
-.done {
-    opacity: 50%;
+.done::after {
+    content: url(/images/checkmark.png);
+    position: relative;
+    z-index: 4;
+    width: 16px;
+    height: 16px;
+    bottom: 120px;
+    left: 10px;
 }
 
 .section1 {

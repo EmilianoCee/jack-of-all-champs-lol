@@ -2,8 +2,7 @@ loadStorage();
 
 function beginStorage () {
     for (z = 0; z < 162; z++)
-    window.localStorage.setItem(JSON.stringify(z),
-    "1");
+    window.localStorage.setItem(JSON.stringify(z), "1");
     window.localStorage.setItem("begin", "none");
     document.getElementById("beginButton").style.display = localStorage.begin;
 }
@@ -12,16 +11,11 @@ function loadStorage() {
     for (z = 0; z < 162; z++) {
         const value = localStorage.getItem(z);
         document.getElementById(z).style.opacity = value;
+        if (value == ".25") {
+            document.getElementById(z).classList.add("done");
+        }
     }
-    document.getElementById("beginButton").style.display = localStorage.begin;
-}
-
-function checkStorage() { 
-    if (localStorage.z) {
-        document.getElementById(z).style.opacity = "100%";
-    } else {
-        document.getElementById(z).style.opacity = "50%";
-    }
+    // document.getElementById("beginButton").style.display = localStorage.begin;
 }
 
 var toggle = false;
@@ -40,7 +34,6 @@ function searchChamp() {
             x[i].style.display="flex";
         }
     }
-
     checkRole();
 }
 
@@ -49,52 +42,76 @@ function sortRole(clickedId) {
     let input = document.getElementById("search").value;
     let x = document.getElementById(clickedId);
     document.getElementById("search").value = x.innerText;
-    searchChamp();
     
+    searchChamp();
 }
 
 function changeop(clickedId) {
+    var element = document.getElementById(clickedId)
+    console.log(toggle);
     if (toggle === true ) {
-        document.getElementById(clickedId).style.opacity = "100%";
-        localStorage.setItem(JSON.parse(document.getElementById(clickedId).id), 
-        "1")
+        element.style.opacity = "100%";
+        localStorage.setItem(JSON.parse(element.id),  "1")
+        element.classList.remove("done");
     } else {
-        document.getElementById(clickedId).style.opacity = "25%";
-        localStorage.setItem(JSON.parse(document.getElementById(clickedId).id), 
-        ".25")
+        element.style.opacity = "25%";
+        localStorage.setItem(JSON.parse(element.id),  ".25")
+        element.classList.add("done");
     }
     toggle = !toggle;
 }
+
+function toggleVisibility() {
+    for (z = 0; z < 162; z++) { 
+        var value = localStorage.getItem(z);
+        if (toggle === false ) {
+            if (value == ".25") {
+                value = "none";
+                document.getElementById(z).style.display = value;
+            }
+        } else {
+            value = "flex";
+            document.getElementById(z).style.display = value;
+            // document.getElementById("search").value = "";
+            searchChamp();
+        }
+    } 
+    toggle = !toggle;
+}
+
+// function visibilityButtonText() {
+//     let button = document.getElementById("visiblity-button");
+//     if (button.innerText == "Hide Completed") {
+//         button.innerText = "Show Completed";
+//     } else {
+//         button.innerText = "Hide Completed";
+//     }
+// }
 
 function toggleAll() {
     let x = document.getElementsByClassName("champion-icon")
     for (i = 0; i < x.length; i++) { 
         if (toggle === true ) {
             x[i].style.opacity = "100%";
-            localStorage.setItem(JSON.parse(x[i].id), 
-        "1")
+            x[i].classList.remove("done");
+            localStorage.setItem(JSON.parse(x[i].id), "1")
         }
         else {
             x[i].style.opacity = "25%";
-            localStorage.setItem(JSON.parse(x[i].id), 
-        ".25")
+            x[i].classList.add("done");
+            localStorage.setItem(JSON.parse(x[i].id), ".25")
         }
     }
     toggle = !toggle;
 }
 
-// function reduceAll() {
-//     let x = document.getElementsByClassName("champion-icon")
-//     for (i = 0; i < x.length; i++){
-//         x[i].style.opacity = "25%";
-//     };
-// }
-
-// function addAll() {
-//     let x = document.getElementsByClassName("champion-icon")
-//     for (i = 0; i < x.length; i++){
-//         x[i].style.opacity = "100%";
-//     };
+// function enableButtonText() {
+//     let button = document.getElementById("enable-button");
+//     if (button.innerText == "Disable All") {
+//         button.innerText = "Enable All";
+//     } else {
+//         button.innerText = "Disable All";
+//     }
 // }
 
 function checkRole () {
@@ -114,29 +131,7 @@ function checkRole () {
     }
 }
 
-
-
 // make sure index of champion grid does not change
-
-// function infColumns(){
-//     const stylesheet = document.styleSheets[0];
-//     console.log(stylesheet);
-//     let elementRules;
-
-//     elementRules = stylesheet.cssRules[2];
-
-//     elementRules.style.setProperty("grid-template-columns", "repeat(auto-fill, minmax(100px, 1fr))");
-// }
-
-// function sevenColumns(){
-//     const stylesheet = document.styleSheets[0];
-//     console.log(stylesheet);
-//     let elementRules;
-
-//     elementRules = stylesheet.cssRules[2];
-
-//     elementRules.style.setProperty("grid-template-columns", "repeat(7, 1fr)");
-// }
 
 function toggleColumns() {
     const stylesheet = document.styleSheets[0];
@@ -145,9 +140,11 @@ function toggleColumns() {
     elementRules = stylesheet.cssRules[2];
         if (toggle === true ) {
             elementRules.style.setProperty("grid-template-columns", "repeat(7, 1fr)");
+            document.getElementById("column-button").innerText = "Max Columns";
         }
         else {
             elementRules.style.setProperty("grid-template-columns", "repeat(auto-fill, minmax(100px, 1fr))");
+            document.getElementById("column-button").innerText = "Seven Columns";
         }
     toggle = !toggle;
 }
