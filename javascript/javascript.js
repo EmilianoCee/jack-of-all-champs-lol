@@ -47,8 +47,8 @@ function sortRole(clickedId) {
 }
 
 function changeop(clickedId) {
-    var element = document.getElementById(clickedId)
-    var op = element.style.opacity;
+    let element = document.getElementById(clickedId)
+    let op = element.style.opacity;
     console.log(op);
     if (op == 0.25) {
         element.style.opacity = "100%";
@@ -64,7 +64,7 @@ function changeop(clickedId) {
 
 function toggleVisibility() {
     for (z = 0; z < 162; z++) { 
-        var value = localStorage.getItem(z);
+        let value = localStorage.getItem(z);
         if (toggle === false ) {
             if (value == ".25") {
                 value = "none";
@@ -152,19 +152,22 @@ function toggleColumns() {
 
 function toggleMenu() {
     const menu = document.querySelector(".menu");
+    const closedIcon = document.querySelector(".close-icon");
+    const burgerIcon = document.querySelector(".burger-icon");
+    const styleLocation = document.styleSheets[0].cssRules[5];
 
     if (menu.classList.contains("show-menu")) {
         menu.classList.remove("show-menu");
-        document.querySelector(".close-icon").style.display = "none";
-        document.querySelector(".burger-icon").style.display = "block";
+        closedIcon.style.display = "none";
+        burgerIcon.style.display = "block";
         menu.style.display = "none";
-        document.styleSheets[0].cssRules[5].style.setProperty("display", "flex");
+        styleLocation.style.setProperty("display", "flex");
     } else {
         menu.classList.add("show-menu");
-        document.querySelector(".close-icon").style.display = "block";
-        document.querySelector(".burger-icon").style.display = "none";
+        closedIcon.style.display = "block";
+        burgerIcon.style.display = "none";
         menu.style.display = "flex";
-        document.styleSheets[0].cssRules[5].style.setProperty("display", "none");
+        styleLocation.style.setProperty("display", "none");
     }
 }
 
