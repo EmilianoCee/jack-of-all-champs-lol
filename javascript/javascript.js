@@ -39,17 +39,19 @@ function searchChamp() {
 
 
 function sortRole(clickedId) {
-    let input = document.getElementById("search").value;
+    let input = document.getElementById("search")
     let x = document.getElementById(clickedId);
-    document.getElementById("search").value = x.innerText;
-    
+    if (input.value == x.innerText) {
+        input.value = "";
+    } else {
+        input.value = x.innerText;
+    }
     searchChamp();
 }
 
 function changeop(clickedId) {
     var element = document.getElementById(clickedId)
     var op = element.style.opacity;
-    console.log(op);
     if (op == 0.25) {
         element.style.opacity = "100%";
         localStorage.setItem(JSON.parse(element.id),  "1")
