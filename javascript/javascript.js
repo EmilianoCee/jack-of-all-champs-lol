@@ -1,176 +1,32 @@
-loadStorage();
-
-function beginStorage () {
-    for (z = 0; z < 162; z++)
-    window.localStorage.setItem(JSON.stringify(z), "1");
-    window.localStorage.setItem("begin", "none");
-    document.getElementById("beginButton").style.display = localStorage.begin;
-}
-
-function loadStorage() {
-    for (z = 0; z < 162; z++) {
-        const value = localStorage.getItem(z);
-        document.getElementById(z).style.opacity = value;
-        if (value == ".25") {
-            document.getElementById(z).classList.add("done");
-        }
+const inputUser = document.getElementById("input-username");
+inputUser.addEventListener(`keypress`, function(event) {
+    if (event.key === "Enter") {
+        console.log(inputUser.value)
+        beginData(inputUser.value)
     }
-    // document.getElementById("beginButton").style.display = localStorage.begin;
-}
+})
 
-var toggle = false;
+const apiKey = 'RGAPI-f08e0c4f-81ab-4ce5-b897-5d3407545fe6';
+const matchId = 'MATCH_ID';
 
-function searchChamp() {
-    let input = document.getElementById("search").value
-    input = input.toLowerCase();
-    let x = document.getElementsByClassName("champion-icon");
-      
-    for (i = 0; i < x.length; i++) { 
-        if (!x[i].innerHTML.toLowerCase().includes(input)) {
-            x[i].style.display="none";
-            
-        }
-        else {
-            x[i].style.display="flex";
-        }
-    }
-    checkRole();
-}
+function beginData(username) {
+    const apiUrl = `https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${username}/NA1?api_key=${apiKey}`;
 
-
-function sortRole(clickedId) {
-    let input = document.getElementById("search")
-    let x = document.getElementById(clickedId);
-    if (input.value == x.innerText) {
-        input.value = "";
-    } else {
-        input.value = x.innerText;
-    }
-    searchChamp();
-}
-
-function changeop(clickedId) {
-    var element = document.getElementById(clickedId)
-    var op = element.style.opacity;
-    if (op == 0.25) {
-        element.style.opacity = "100%";
-        localStorage.setItem(JSON.parse(element.id),  "1")
-        element.classList.remove("done");
-    } else {
-        element.style.opacity = "25%";
-        localStorage.setItem(JSON.parse(element.id),  ".25")
-        element.classList.add("done");
-    }
-    toggle = !toggle;
-}
-
-function toggleVisibility() {
-    for (z = 0; z < 162; z++) { 
-        var value = localStorage.getItem(z);
-        if (toggle === false ) {
-            if (value == ".25") {
-                value = "none";
-                document.getElementById(z).style.display = value;
-            }
+    fetch(apiUrl)
+    .then(response => {
+        if (response.ok) {
+            return response.json(); // Parse the response as JSON
         } else {
-            value = "flex";
-            document.getElementById(z).style.display = value;
-            // document.getElementById("search").value = "";
-            searchChamp();
+            throw new Error('Error: ' + response.status);
         }
-    } 
-    toggle = !toggle;
+    })
+    .then(data => {
+        // Process the retrieved match data
+        // console.log(data);
+        document.querySelector(`.header h1`).innerText = data.gameName;
+    })
+    .catch(error => {
+        // Handle any errors that occurred during the request
+        console.error('Error:', error);
+    });
 }
-
-// function visibilityButtonText() {
-//     let button = document.getElementById("visiblity-button");
-//     if (button.innerText == "Hide Completed") {
-//         button.innerText = "Show Completed";
-//     } else {
-//         button.innerText = "Hide Completed";
-//     }
-// }
-
-function toggleAll() {
-    let x = document.getElementsByClassName("champion-icon")
-    for (i = 0; i < x.length; i++) { 
-        if (toggle === true ) {
-            x[i].style.opacity = "100%";
-            x[i].classList.remove("done");
-            localStorage.setItem(JSON.parse(x[i].id), "1")
-        }
-        else {
-            x[i].style.opacity = "25%";
-            x[i].classList.add("done");
-            localStorage.setItem(JSON.parse(x[i].id), ".25")
-        }
-    }
-    toggle = !toggle;
-}
-
-// function enableButtonText() {
-//     let button = document.getElementById("enable-button");
-//     if (button.innerText == "Disable All") {
-//         button.innerText = "Enable All";
-//     } else {
-//         button.innerText = "Disable All";
-//     }
-// }
-
-function checkRole () {
-    let input = document.getElementById("search").value;
-    input = input.toLowerCase();
-    let x = document.getElementsByClassName("role");
-      
-    for (i = 0; i < x.length; i++) { 
-        if (x[i].innerText == input) {
-            x[i].style.opacity="100%";
-            x[i].style.borderBottom = "solid 8px rgb(120, 90, 40)";
-        }
-        else {
-            x[i].style.opacity = "35%";
-            x[i].style.borderBottom = " solid 8px rgba(120, 90, 40, 0)";
-        }
-    }
-}
-
-// make sure index of champion grid does not change
-
-function toggleColumns() {
-    const stylesheet = document.styleSheets[0];
-    let elementRules;
-    elementRules = stylesheet.cssRules[2];
-        if (toggle === true ) {
-            elementRules.style.setProperty("grid-template-columns", "repeat(7, 1fr)");
-            document.getElementById("column-button").innerText = "Max Columns";
-        }
-        else {
-            elementRules.style.setProperty("grid-template-columns", "repeat(auto-fill, minmax(100px, 1fr))");
-            document.getElementById("column-button").innerText = "Seven Columns";
-        }
-    toggle = !toggle;
-}
-
-
-function toggleMenu() {
-    const menu = document.querySelector(".menu");
-
-    if (menu.classList.contains("show-menu")) {
-        menu.classList.remove("show-menu");
-        document.querySelector(".close-icon").style.display = "none";
-        document.querySelector(".burger-icon").style.display = "block";
-        menu.style.display = "none";
-        document.styleSheets[0].cssRules[5].style.setProperty("display", "flex");
-    } else {
-        menu.classList.add("show-menu");
-        document.querySelector(".close-icon").style.display = "block";
-        document.querySelector(".burger-icon").style.display = "none";
-        menu.style.display = "flex";
-        document.styleSheets[0].cssRules[5].style.setProperty("display", "none");
-    }
-}
-
-
-// fetch("http://ddragon.leagueoflegends.com/cdn/12.6.1/data/en_US/champion.json")
-//     .then(res => res.json())
-//     .then(data => console.log(data))
