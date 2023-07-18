@@ -1,16 +1,15 @@
 const inputUser = document.getElementById("input-username");
 inputUser.addEventListener(`keypress`, function(event) {
     if (event.key === "Enter") {
-        console.log(inputUser.value)
-        beginData(inputUser.value)
+        getID(inputUser.value)
     }
 })
 
-const apiKey = 'RGAPI-f08e0c4f-81ab-4ce5-b897-5d3407545fe6';
+const apiKey = 'RGAPI-35ab58c6-ef9a-4311-bf3a-2e1c4324da4a';
 const matchId = 'MATCH_ID';
 
-function beginData(username) {
-    const apiUrl = `https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${username}/NA1?api_key=${apiKey}`;
+function getID(username) {
+    const apiUrl = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${username}?api_key=${apiKey}`
 
     fetch(apiUrl)
     .then(response => {
@@ -22,8 +21,8 @@ function beginData(username) {
     })
     .then(data => {
         // Process the retrieved match data
-        // console.log(data);
-        document.querySelector(`.header h1`).innerText = data.gameName;
+        console.log(data);
+        let puuid = data.puuid;
     })
     .catch(error => {
         // Handle any errors that occurred during the request
